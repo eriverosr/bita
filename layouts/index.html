@@ -8,23 +8,23 @@
 			<main class="list">
 				<div class="site-description">
 					{{- if isset .Site.Params "subtitle" -}}
-					<p>{{ .Site.Params.Subtitle | markdownify }}</p>
+					<p>{{ .Site.Params.Subtitle | markdownify | emojify }}</p>
 					{{- end -}}
 				</div>
 				{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 				{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 				{{ range $paginator.Pages }}
 				<section class="list-item">
-					<h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
+					<h1 class="title"><a href="{{ .RelPermalink }}">{{.Title | emojify}}</a></h1>
 					<time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
-					<br><div class="description">
+					<br><div class="description"><p>
 						{{ if isset .Params "description" }}
-						{{ .Description }}
+						{{ .Description | markdownify | emojify  }}
 						{{ else }}
-						{{ .Summary }}&hellip;
+						{{ .Summary | emojify }}&hellip;
 						{{ end }}
-					</div>
-					<a href="{{ .RelPermalink }}">Read more ⟶</a>
+					</p></div>
+					<a href="{{ .RelPermalink }}">Leer más ⟶</a>
 				</section>
 				{{ end }}
 				{{ template "partials/paginator.html" . }}

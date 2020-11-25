@@ -1,46 +1,59 @@
-baseURL = "https://example.com"
+baseURL = "https://e.xor.cl"
 languageCode = "en-us"
-title = "Archie"
-theme="archie"
-copyright = "© Athul"
-pygmentsstyle = "monokai"
+title = "Bitácora"
+theme="bita"
+copyright = "Eduardo Riveros Roca"
+pygmentsstyle = "solarized-dark"
 pygmentscodefences = true
+ignoreErrors = ["error-remote-getjson"]
 pygmentscodefencesguesssyntax = true
 [params]
-	mode="auto"
 	useCDN=false
-	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
+	mode="auto"
+	subtitle = "¡Hola! Me llamo Eduardo y esta es mi bitácora."
+	mainColor = "#009999"
+	accentColor = "#ffc400"
+	matomoURL = "//analytics.xor.cl/"
+  	matomoSiteID = "1"
+
 
 [[params.social]]
 name = "GitHub"
 icon = "github"
-url = "https://github.com/athul/archie"
+url = "https://github.com/eriverosr/bita"
 
 [[params.social]]
 name = "Twitter"
 icon = "twitter"
-url = "https://github.com/athulcajay/"
+url = "https://github.com/eriverosr/"
 
-[[params.social]]
-name = "GitLab"
-icon = "gitlab"
-url = "https://gitlab.com/athul/"
 [[menu.main]]
-name = "Home"
+name = "Inicio"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
+name = "Posts"
 url = "/posts"
 weight = 2
 
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
 
 [[menu.main]]
-name = "Tags"
+name = "Etiquetas"
 url = "/tags"
 weight = 4
+
+[[menu.main]]
+name = "xor.cl"
+url = "https://xor.cl"
+weight = 5
+
+[[params.social]]
+name = "Telegram"
+icon = "send"
+url = "https://t.me/eriveros/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://linkedin.com/in/eriverosr/"

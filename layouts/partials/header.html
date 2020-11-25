@@ -15,10 +15,10 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta property="og:description" content="{{ .Params.description }}" />
-	<meta name="twitter:description" content="{{ .Params.description }}" />
-	<meta name="description" content="{{ $.Param "description" }}" />
-	<meta name="description" content="{{ $.Params.description }}" />
+	<meta property="og:description" content="{{ .Params.description | emojify }}" />
+	<meta name="twitter:description" content="{{ .Params.description | emojify }}" />
+	<meta name="description" content="{{ $.Param "description" | emojify }}" />
+	<meta name="description" content="{{ $.Params.description | emojify }}" />
 
 	<meta property="og:title" content="{{ $title }} | {{ $siteTitle }}" />
 	<meta name="twitter:title" content="{{ $title }} | {{ $siteTitle }}" />
@@ -62,4 +62,11 @@
 	<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
 	{{- end }}
 	{{- end }}
+	<style>
+        :root{
+            --mainColor: {{ default "#009999" .Site.Params.mainColor }}; 
+            --accentColor: {{ default "#ffc400" .Site.Params.accentColor }};
+        }
+    </style>
+
 </head>

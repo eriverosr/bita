@@ -1,16 +1,16 @@
 # Bita - Hugo theme
 Bita is a minimal and clean theme for hugo with a markdown-ish UI.
 
-Forked from [Archie theme ](https://athul.github.io/archie/), which is forked from [Ezhil Theme](https://github.com/vividvilla/ezhil)
+Forked from [Archie theme](https://athul.github.io/archie/), which is forked from [Ezhil Theme](https://github.com/vividvilla/ezhil)
 
 ## Demo
 
-[Check the Demo](https://athul.github.io/archie/) hosted on GitHub Pages :smile: . You can find the source code to that in the `site` branch of this repository
+[Check the Demo](https://eriverosr.github.io/bita/) hosted on GitHub Pages :smile: . You can find the source code to that in the `site` branch of this repository
 
 ![](/images/theme.png)
-![](/images/archie-dark.png)
+![](/images/bita-dark.png)
 ## Feature
-- Google Analytics Script
+- Matomo Script
 - Callouts
 - Tags
 - Auto Dark Mode(based on system theme)
@@ -21,9 +21,9 @@ In your Hugo website directory, create a new folder named theme and clone the re
 ```bash
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/athul/archie.git
+$ git clone https://github.com/eriverosr/bita.git
 ```
-Edit the `config.toml` file with `theme="archie"`
+Edit the `config.toml` file with `theme="bita"`
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 ## Writing Posts
@@ -48,13 +48,13 @@ Inspired by design of blog.jse.li
 ## Config of the Demo Site
 
 ```toml
-baseURL = "https://athul.github.io/archie/"
+baseURL = "https://eriverosr.github.io/bita/"
 languageCode = "en-us"
-title = "Archie"
-theme="archie"
-copyright = "© Athul"
+title = "Bita"
+theme="bita"
+copyright = "©"
 # Code Highlight
-pygmentsstyle = "monokai"
+pygmentsstyle = "solarized-dark"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -63,24 +63,24 @@ paginate=3 # articles per page
 [params]
 	mode="auto" # color-mode → light,dark or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
+	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/eriverosr/bita)"
 
 # Social Tags
 
 [[params.social]]
 name = "GitHub"
 icon = "github"
-url = "https://github.com/athul/archie"
+url = "https://github.com/eriverosr/bita"
 
 [[params.social]]
 name = "Twitter"
 icon = "twitter"
-url = "https://twitter.com/athulcajay/"
+url = "https://twitter.com/adderou/"
 
 [[params.social]]
-name = "GitLab"
+name = "Linkedin"
 icon = "gitlab"
-url = "https://gitlab.com/athul/"
+url = "https://gitlab.com/eriverosr/"
 
 # Main menu Items
 
